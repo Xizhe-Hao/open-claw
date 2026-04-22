@@ -1,0 +1,14 @@
+{
+  "name": "chicago-travel-simple",
+  "version": "1.0.0",
+  "description": "芝加哥旅行网站 - 简化版",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "frontend": "python -m http.server 8080"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

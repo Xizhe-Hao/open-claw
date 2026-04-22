@@ -258,9 +258,23 @@ function loadAllAttractions() {
 }
 
 // 显示景点详情
-function showAttractionDetails(id) {
-    const attraction = chicagoAttractions.find(a => a.id === id);
-    if (!attraction) return;
+function showAttractionDetails(idOrAttraction) {
+    let attraction;
+    
+    // 支持两种调用方式：传入ID或完整对象
+    if (typeof idOrAttraction === 'number') {
+        attraction = chicagoAttractions.find(a => a.id === idOrAttraction);
+    } else if (typeof idOrAttraction === 'object' && idOrAttraction.id) {
+        attraction = idOrAttraction;
+    } else {
+        console.error('无效的景点参数');
+        return;
+    }
+    
+    if (!attraction) {
+        console.error('未找到景点');
+        return;
+    }
     
     // 创建详情模态框
     const modal = document.createElement('div');
@@ -312,4 +326,58 @@ function showAttractionDetails(id) {
                         <h4 class="text-lg font-semibold text-chicago-dark mb-2">特色亮点</h4>
                         <ul class="space-y-1">
                             ${attraction.highlights.map(highlight => `
-                                <li class="flex items-center
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-chicago-accent mr-2"></i>
+                                    <span>${highlight}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-chicago-dark mb-3">详细介绍</h4>
+                    <p class="text-gray-700 leading-relaxed">${attraction.description}</p>
+                </div>
+                
+                <div class="flex gap-3">
+                    <button class="btn btn-primary flex-1">预订门票</button>
+                    <button class="btn btn-secondary flex-1">分享到社交媒体</button>
+                    <button class="close-modal btn btn-outline flex-1">关闭</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 添加模态框到页面
+    document.body.appendChild(modal);
+    
+    // 模态框事件监听
+    const closeButtons = modal.querySelectorAll('.close-modal');
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            modal.remove();
+        });
+    });
+    
+    // 点击背景关闭模态框
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+    
+    // ESC键关闭
+    function handleEscape(e) {
+        if (e.key === 'Escape') {
+            modal.remove();
+            document.removeEventListener('keydown', handleEscape);
+        }
+    }
+    document.addEventListener('keydown', handleEscape);
+}
+
+// 导出数据供其他模块使用
+window.chicagoAttractions = chicagoAttractions;
+window.showAttractionDetails = showAttractionDetails;
+window.loadAllAttractions = loadAllAttractions;
