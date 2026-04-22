@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芝加哥旅行指南 | 探索风城魅力</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-city"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>芝加哥旅行指南</h1>
+                    <p>探索风城魅力 · 发现无限可能</p>
+                </div>
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="#attractions" class="nav-link"><i class="fas fa-landmark"></i> 景点</a></li>
+                    <li><a href="#itinerary" class="nav-link"><i class="fas fa-route"></i> 行程</a></li>
+                    <li><a href="#food" class="nav-link"><i class="fas fa-utensils"></i> 美食</a></li>
+                    <li><a href="#accommodation" class="nav-link"><i class="fas fa-hotel"></i> 住宿</a></li>
+                    <li><a href="#login" class="nav-link"><i class="fas fa-user"></i> 登录</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero-section" id="home">
+        <div class="container hero-content">
+            <h1 class="hero-title">欢迎来到芝加哥</h1>
+            <p class="hero-description">
+                风城芝加哥，美国第三大城市，以其壮丽的天际线、世界级的博物馆、美味的深盘披萨和丰富的文化体验而闻名。
+                从千禧公园的云门到海军码头的百年轮，从华丽一英里的购物到芝加哥河的游船，这座城市总有惊喜等待您发现。
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#attractions" class="btn btn-primary btn-lg">
+                    开始探索 <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#itinerary" class="btn btn-secondary btn-lg">
+                    行程规划 <i class="fas fa-calendar-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 热门景点 -->
+            <section id="attractions" class="mb-16">
+                <h2 class="section-title">热门景点推荐</h2>
+                <div class="attractions-grid" id="attractions-grid">
+                    <!-- 景点卡片将通过JavaScript动态加载 -->
+                </div>
+            </section>
+
+            <!-- 特色功能 -->
+            <section class="features-grid mb-16">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="feature-title">智能行程规划</h3>
+                    <p class="feature-description">根据您的兴趣和时间，自动生成3天、5天、7天最佳行程方案。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="feature-title">成本计算器</h3>
+                    <p class="feature-description">精确计算旅行预算，包含交通、住宿、餐饮、门票等所有费用。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="feature-title">安全指南</h3>
+                    <p class="feature-description">提供芝加哥安全区域指南、紧急联系方式和实用安全贴士。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="feature-title">多语言支持</h3>
+                    <p class="feature-description">中英文双语内容，方便国际游客获取准确信息。</p>
+                </div>
+            </section>
+
+            <!-- 行程规划预览 -->
+            <section id="itinerary" class="mb-16">
+                <h2 class="section-title">推荐行程方案</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-chicago-gray p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-chicago-blue mb-3">3天精华游</h3>
+                        <p class="text-gray-600 mb-4">适合时间紧张的游客，体验芝加哥核心景点。</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 千禧公园 + 云门</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 海军码头 + 百年轮</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 威利斯塔观景台</li>
+                        </ul>
+                        <div class="text-chicago-purple font-bold">预算: $400-600/人</div>
+                    </div>
+                    
+                    <div class="bg-chicago-gray p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-chicago-blue mb-3">5天深度游</h3>
+                        <p class="text-gray-600 mb-4">推荐选择，充分体验芝加哥多元文化。</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 包含3天所有景点</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 芝加哥美术馆</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 建筑游船体验</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 美食探索之旅</li>
+                        </ul>
+                        <div class="text-chicago-purple font-bold">预算: $700-1000/人</div>
+                    </div>
+                    
+                    <div class="bg-chicago-gray p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-chicago-blue mb-3">7天豪华游</h3>
+                        <p class="text-gray-600 mb-4">深度探索芝加哥及周边地区。</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 包含5天所有景点</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> Starved Rock州立公园</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 密歇根湖一日游</li>
+                            <li class="flex items-center"><i class="fas fa-check text-chicago-accent mr-2"></i> 购物与休闲时光</li>
+                        </ul>
+                        <div class="text-chicago-purple font-bold">预算: $1200-1800/人</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <p class="footer-text">
+                        芝加哥旅行指南是由热爱这座城市的团队创建，旨在为游客提供最准确、最实用的旅行信息。
+                        我们致力于让每一位游客都能深度体验芝加哥的独特魅力。
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#attractions">热门景点</a></li>
+                        <li><a href="#itinerary">行程规划</a></li>
+                        <li><a href="#food">美食推荐</a></li>
+                        <li><a href="#accommodation">住宿指南</a></li>
+                        <li><a href="#transportation">交通信息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>实用信息</h3>
+                    <ul class="footer-links">
+                        <li><a href="#safety">安全指南</a></li>
+                        <li><a href="#weather">天气信息</a></li>
+                        <li><a href="#emergency">紧急联系</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>关注我们</h3>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="text-white hover:text-chicago-accent transition-colors">
+                            <i class="fab fa-weibo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-chicago-accent transition-colors">
+                            <i class="fab fa-weixin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-chicago-accent transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-chicago-accent transition-colors">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 芝加哥旅行指南. 保留所有权利. | <a href="#privacy" class="text-chicago-accent hover:underline">隐私政策</a> | <a href="#terms" class="text-chicago-accent hover:underline">使用条款</a></p>
+                <p class="mt-2">本网站内容仅供参考，实际信息可能有所变动，请以官方发布为准。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/attractions.js"></script>
+</body>
+</html>

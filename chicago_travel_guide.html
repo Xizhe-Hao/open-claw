@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芝加哥完整旅行攻略 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background: #2a5298;
+            color: white;
+        }
+        
+        main {
+            padding: 40px 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #2a5298;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .attraction-card {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .attraction-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .attraction-card h4 {
+            color: #2a5298;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .rating {
+            color: #ff9800;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        table thead {
+            background: #2a5298;
+            color: white;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        table tbody tr:hover {
+            background: #e8eef7;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+        
+        .itinerary {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .itinerary h4 {
+            color: #2a5298;
+            margin-bottom: 10px;
+        }
+        
+        .itinerary ul {
+            margin-left: 20px;
+            list-style: none;
+        }
+        
+        .itinerary li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .itinerary li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .tips {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .tips strong {
+            color: #2e7d32;
+        }
+        
+        footer {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 2px solid #ddd;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+            
+            table th, table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌆 芝加哥完整旅行攻略</h1>
+            <p>2026年最新版 — 由司礼监编纂</p>
+        </header>
+        
+        <nav>
+            <a href="#transport">🚌 交通指南</a>
+            <a href="#attractions">🎭 景点推荐</a>
+            <a href="#itinerary">📅 行程规划</a>
+            <a href="#food">🍽️ 美食推荐</a>
+            <a href="#accommodation">🏨 住宿推荐</a>
+            <a href="#info">ℹ️ 实用信息</a>
+        </nav>
+        
+        <main>
+            <!-- 交通指南 -->
+            <section id="transport">
+                <h2>🚌 交通指南</h2>
+                
+                <h3>机场到市中心</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>方式</th>
+                            <th>费用</th>
+                            <th>时间</th>
+                            <th>推荐度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>蓝线地铁</strong></td>
+                            <td class="price-tag">$2.50</td>
+                            <td>45分钟</td>
+                            <td>⭐⭐⭐⭐ 便宜便捷</td>
+                        </tr>
+                        <tr>
+                            <td><strong>出租车/Uber</strong></td>
+                            <td class="price-tag">$35-55</td>
+                            <td>25-30分钟</td>
+                            <td>⭐⭐⭐ 舒适快速</td>
+                        </tr>
+                        <tr>
+                            <td><strong>机场巴士</strong></td>
+                            <td class="price-tag">$5</td>
+                            <td>1小时</td>
+                            <td>⭐⭐⭐ 经济选择</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>市内交通</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>交通方式</th>
+                            <th>票价</th>
+                            <th>推荐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>地铁/巴士单程</td>
+                            <td class="price-tag">$2.50</td>
+                            <td>最常用</td>
+                        </tr>
+                        <tr>
+                            <td>日票 Visitor Passport</td>
+                            <td class="price-tag">$5</td>
+                            <td>1天多次往返</td>
+                        </tr>
+                        <tr>
+                            <td>3日通票</td>
+                            <td class="price-tag">$15</td>
+                            <td>🌟 游客首选</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- 景点推荐 -->
+            <section id="attractions">
+                <h2>🎭 景点推荐</h2>
+                
+                <h3>⭐⭐⭐⭐⭐ 必去景点</h3>
+                
+                <div class="attraction-card">
+                    <h4><span class="emoji">🎨</span> 千禧公园 Millennium Park</h4>
+                    <div class="rating">推荐指数: ⭐⭐⭐⭐⭐</div>
+                    <p><strong>特色景点:</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>☁️ <strong>云门 "The Bean"</strong> — 著名倒映镜面雕塑</li>
+                        <li>👑 <strong>皇冠喷泉</strong> — 高科技互动喷泉</li>
+                        <li>🌸 <strong>卢里花园</strong> — 四季花园景观</li>
+                    </ul>
+                    <p><strong>门票:</strong> <span class="price-tag">完全免费！</span></p>
+                    <p><strong>开放时间:</strong> 全天开放 (6am-11pm)</p>
+                    <p><strong>游玩建议:</strong> 早晨或傍晚来拍照，日落时最美。停留1-2小时。</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h4><span class="emoji">⚓</span> 海军码头 Navy Pier</h4>
+                    <div class="rating">推荐指数: ⭐⭐⭐⭐⭐</div>
+                    <p><strong>特色项目:</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>🎡 百年轮 — 160英尺高观景轮</li>
+                        <li>🎢 儿童游乐园</li>
+                        <li>🍽️ 众多餐厅与酒吧</li>
+                        <li>🚁 FlyOver Chicago — 4D飞行体验</li>
+                        <li>✨ 夏季烟火秀</li>
+                    </ul>
+                    <p><strong>门票:</strong> 进入免费，项目单独收费</p>
+                    <p><strong>时间:</strong> 10am-midnight (夏季延长)</p>
+                    <p><strong>建议:</strong> 傍晚来看夕阳和夜景。停留2-3小时。</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h4><span class="emoji">🖼️</span> 芝加哥美术馆 Art Institute</h4>
+                    <div class="rating">推荐指数: ⭐⭐⭐⭐⭐</div>
+                    <p><strong>特色:</strong> 美国第二大美术馆，26万+件艺术作品</p>
+                    <p><strong>必看:</strong> Grant Wood《美国哥特式》、印象派大师作品</p>
+                    <p><strong>门票:</strong> <span class="price-tag">$25</span> (含建议捐赠)</p>
+                    <p><strong>时间:</strong> 10:30am-5pm (周五至8pm)</p>
+                    <p><strong>停留:</strong> 3-4小时起</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h4><span class="emoji">🏗️</span> 建筑游船 Architecture Boat Cruise</h4>
+                    <div class="rating">推荐指数: ⭐⭐⭐⭐⭐</div>
+                    <p><strong>特色:</strong> 沿芝加哥河欣赏建筑杰作，讲解建筑历史</p>
+                    <p><strong>门票:</strong> <span class="price-tag">$40-50</span></p>
+                    <p><strong>时间:</strong> 1.5-2小时</p>
+                    <p><strong>建议:</strong> 💡 傍晚最佳！这是芝加哥的灵魂体验。</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h4><span class="emoji">🏢</span> 威利斯塔观景台 Willis Tower</h4>
+                    <div class="rating">推荐指数: ⭐⭐⭐⭐</div>
+                    <p><strong>特色:</strong> 103层高楼，俯瞰整个芝加哥</p>
+                    <p><strong>亮点:</strong> The Ledge — 悬空玻璃盒子体验（超刺激！）</p>
+                    <p><strong>门票:</strong> <span class="price-tag">$26-36</span></p>
+                    <p><strong>时间:</strong> 9am-10pm</p>
+                </div>
+            </section>
+            
+            <!-- 行程规划 -->
+            <section id="itinerary">
+                <h2>📅 行程规划</h2>
+                
+                <h3>3天快速版</h3>
+                <div class="itinerary">
+                    <h4>Day 1: 艺术与建筑</h4>
+                    <ul>
+                        <li>上午: 千禧公园 → 云门拍照 → 凯瑞公园观景</li>
+                        <li>中午: 华丽一英里购物/美食</li>
+                        <li>下午: 芝加哥美术馆 (2小时)</li>
+                        <li>傍晚: 建筑游船 (最佳时间！)</li>
+                        <li>晚上: 河畔餐厅晚餐</li>
+                    </ul>
+                </div>
+                
+                <div class="itinerary">
+                    <h4>Day 2: 景观与娱乐</h4>
+                    <ul>
+                        <li>上午: 威利斯塔观景台 (The Ledge体验)</li>
+                        <li>中午: Navy Pier附近美食</li>
+                        <li>下午: 海军码头 → 百年轮 → FlyOver Chicago</li>
+                        <li>傍晚: 逛华丽一英里</li>
+                        <li>晚上: Navy Pier夜景 + 烟火秀 (夏季)</li>
+                    </ul>
+                </div>
+                
+                <div class="itinerary">
+                    <h4>Day 3: 博物馆与公园</h4>
+                    <ul>
+                        <li>选项A: 林肯公园动物园 + 文化中心</li>
+                        <li>选项B: 谢德水族馆 + 天文馆</li>
+                        <li>选项C: 科学与工业博物馆 (需全天)</li>
+                        <li>返程准备</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight">
+                    <strong>💡 建议:</strong> 如果时间允许，5天行程最佳！可以加入Starved Rock州立公园一日游或周边景点。
+                </div>
+            </section>
+            
+            <!-- 美食推荐 -->
+            <section id="food">
+                <h2>🍽️ 美食推荐</h2>
+                
+                <h3>🍕 深盘披萨 Deep-Dish Pizza</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>餐厅</th>
+                            <th>特色</th>
+                            <th>价格</th>
+                            <th>推荐度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Lou Malnati's</strong></td>
+                            <td>经典老店，起司丰富</td>
+                            <td class="price-tag">$15-25</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pequod's</strong></td>
+                            <td>脆边披萨</td>
+                            <td class="price-tag">$14-24</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pizzeria Uno</strong></td>
+                            <td>美式深盘发源地</td>
+                            <td class="price-tag">$12-20</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>🌭 芝加哥热狗</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>餐厅</th>
+                            <th>特色</th>
+                            <th>价格</th>
+                            <th>推荐度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Portillo's</strong></td>
+                            <td>连锁老字号</td>
+                            <td class="price-tag">$5-8</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wiener's Circle</strong></td>
+                            <td>现点现做</td>
+                            <td class="price-tag">$6-9</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="tips">
+                    <strong>💡 小贴士:</strong> 芝加哥热狗的特色配菜包括番茄、洋葱、芥末、泡菜、芝麻。但绝对不要加番茄酱！
+                </div>
+            </section>
+            
+            <!-- 住宿推荐 -->
+            <section id="accommodation">
+                <h2>🏨 住宿推荐</h2>
+                
+                <h3>推荐区域: Downtown / Magnificent Mile</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>级别</th>
+                            <th>价格/晚</th>
+                            <th>代表酒店</th>
+                            <th>特色</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>经济型</strong></td>
+                            <td class="price-tag">$80-120</td>
+                            <td>HI Chicago Hostel</td>
+                            <td>年轻旅客，社交性强</td>
+                        </tr>
+                        <tr>
+                            <td><strong>中档</strong></td>
+                            <td class="price-tag">$150-220</td>
+                            <td>Hampton Inn Downtown</td>
+                            <td>性价比高，位置好</td>
+                        </tr>
+                        <tr>
+                            <td><strong>高档</strong></td>
+                            <td class="price-tag">$280-450</td>
+                            <td>The Westin Michigan Ave</td>
+                            <td>舒适奢华，服务顶级</td>
+                        </tr>
+                        <tr>
+                            <td><strong>豪华</strong></td>
+                            <td class="price-tag">$500+</td>
+                            <td>The Langham Chicago</td>
+                            <td>5星体验，顶级设施</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- 实用信息 -->
+            <section id="info">
+                <h2>ℹ️ 实用信息</h2>
+                
+                <h3>最佳游玩季节</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>季节</th>
+                            <th>气温</th>
+                            <th>特点</th>
+                            <th>建议</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>6-8月</strong></td>
+                            <td>20-28°C</td>
+                            <td>温暖晴朗，活动众多</td>
+                            <td>⭐⭐⭐⭐⭐ 最佳季节</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4-5月/9-10月</strong></td>
+                            <td>15-22°C</td>
+                            <td>春秋过渡，天气变化</td>
+                            <td>⭐⭐⭐⭐ 携带外套</td>
+                        </tr>
+                        <tr>
+                            <td><strong>11-3月</strong></td>
+                            <td>-5-5°C</td>
+                            <td>寒冷，风大，雪天</td>
+                            <td>⭐⭐ 不推荐</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>安全提示</h3>
+                <div class="tips">
+                    <strong>✅ 安全区域:</strong> Downtown、Magnificent Mile、Lincoln Park<br>
+                    <strong>⚠️ 谨慎区域:</strong> South Side某些街区、特定公园夜间<br>
+                    <strong>🚕 建议:</strong> 夜间出行使用出租车或Uber<br>
+                    <strong>📱 应急:</strong> 遇到问题拨打911
+                </div>
+                
+                <h3>重要信息</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>时区</strong></td>
+                            <td>中部时间 (CT)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>语言</strong></td>
+                            <td>英文为主</td>
+                        </tr>
+                        <tr>
+                            <td><strong>货币</strong></td>
+                            <td>美元 (USD)，刷卡便利</td>
+                        </tr>
+                        <tr>
+                            <td><strong>小费</strong></td>
+                            <td>餐厅15-20%，出租车10-15%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>插座</strong></td>
+                            <td>美式120V/60Hz</td>
+                        </tr>
+                        <tr>
+                            <td><strong>网络</strong></td>
+                            <td>大多酒店/餐厅有免费WiFi</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>成本估算 (3天)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>成本</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>交通</td>
+                            <td class="price-tag">$150</td>
+                        </tr>
+                        <tr>
+                            <td>景点门票</td>
+                            <td class="price-tag">$200-300</td>
+                        </tr>
+                        <tr>
+                            <td>餐饮</td>
+                            <td class="price-tag">$250-400</td>
+                        </tr>
+                        <tr>
+                            <td>住宿 (3晚中档)</td>
+                            <td class="price-tag">$450-700</td>
+                        </tr>
+                        <tr>
+                            <td><strong>总计</strong></td>
+                            <td><strong class="price-tag">$1150-1550</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <div class="highlight">
+                <h3>✨ 临别建议</h3>
+                <ul style="margin-left: 20px;">
+                    <li>一定要看建筑 — 建筑游船是必去项目！</li>
+                    <li>充足的时间 — 5天以上更能体验芝加哥</li>
+                    <li>季节考虑 — 6-8月最佳，避免冬季</li>
+                    <li>提前预订 — 热门餐厅和酒店需提前</li>
+                    <li>舒服的鞋 — 城市景点需大量行走</li>
+                    <li>相机准备 — 千禧公园和建筑值得拍照</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>🏮 本攻略由司礼监编纂，户部数据支撑，翰林院文案优化</p>
+            <p>祝您在芝加哥度过美好的时光！ 🌆✨</p>
+        </footer>
+    </div>
+</body>
+</html>
