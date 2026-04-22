@@ -166,8 +166,11 @@ async function loadAttractionsFromAPI() {
         grid.innerHTML = '';
         
         attractions.forEach(attraction => {
-            const card = createAttractionCard(attraction);
-            grid.appendChild(card);
+            const cardHtml = createAttractionCard(attraction);
+            const temp = document.createElement('div');
+            temp.innerHTML = cardHtml;
+            const cardEl = temp.firstElementChild;
+            if (cardEl) grid.appendChild(cardEl);
         });
         
         // 添加点击事件
@@ -217,27 +220,21 @@ async function showAttractionDetailsFromAPI(id) {
 async function initAPI() {
     console.log('初始化API集成...');
     
-    // 检查API健康状态
-    const health = await checkAPIHealth();
+    // 检查API健康状态（带超时，避免阻塞）
+    let health = { healthy: false };
+    try {
+        const healthPromise = checkAPIHealth();
+        const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 2000));
+        health = await Promise.race([healthPromise, timeoutPromise]);
+    } catch (e) {
+        console.warn('⚠️ API服务不可用，使用本地数据');
+    }
     
     if (health.healthy) {
         console.log(`✅ API服务正常: ${health.service} v${health.version}`);
-        
-        // 替换原有的景点加载函数
-        if (typeof loadAllAttractions === 'function') {
-            window.originalLoadAllAttractions = loadAllAttractions;
-        }
-        
-        window.loadAllAttractions = loadAttractionsFromAPI;
-        
-        // 如果页面已加载，立即重新加载数据
-        if (document.readyState === 'complete') {
-            await loadAttractionsFromAPI();
-        }
-        
+        // API可用时不替换loadAllAttractions，避免重复加载冲突
     } else {
         console.warn('⚠️ API服务不可用，使用本地数据');
-        // 保持原有的本地数据加载
     }
     
     // 添加API状态指示器

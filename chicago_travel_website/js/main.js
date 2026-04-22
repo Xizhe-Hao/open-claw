@@ -140,7 +140,8 @@ function filterAttractions(filter) {
     const attractions = document.querySelectorAll('.attraction-card');
     
     attractions.forEach(card => {
-        const category = card.querySelector('.card-badge').textContent;
+        const badgeEl = card.querySelector('.card-badge');
+        const category = badgeEl ? badgeEl.textContent : '';
         
         if (filter === 'all' || category.includes(filter)) {
             card.style.display = 'block';
